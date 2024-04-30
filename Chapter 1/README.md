@@ -15,8 +15,13 @@ You may not remember what logarithms are, but you probably know what
 exponentials are. log10 100 is like asking, “How many 10s do we multiply 
 together to get 100?” The answer is 2: 10 × 10. So log10 100 = 2. **Logs are the flip of exponentials.**
 
-![alt text](image.png)
-
+| Exponentials |         Logarithms         |
+|:------------:|:--------------------------:|
+|   $10^2$     |  log<sub>10</sub> 100 = 2  |
+|  $10^3$      |  log<sub>10</sub> 1000 = 3 |
+|  $2^3$       |  log<sub>2</sub> 8 = 3     |
+|  $2^4$       |  log<sub>2</sub> 16 = 4    |
+|  $2^5$       |  log<sub>2</sub> 32 = 5    |
 
 ## Exercises
 
