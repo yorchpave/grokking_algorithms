@@ -1,43 +1,19 @@
 # Breadth-First Search
 
-This chapter talks about binary search.
+ - Breadth-first search tells you if there’s a path from A to B.
 
-## Binary search
+ - If there’s a path, breadth-first search will find the shortest path.
 
-Binary search is an algorithm; its input is a sorted list of elements  (I’ll explain later why it needs to be sorted). If an element you’re looking for is in that list binary search returns the position where it’s located. Otherwise, binary search returns null.
+ - If you have a problem like “find the shortest X,” try modeling your problem as a graph, and use breadth-first search to solve.
 
-In general, for any list of n, binary search will take log2 n steps to run in the worst case, whereas simple search will take n steps.
+- A directed graph has arrows, and the relationship follows the direction of the arrow (rama -> adit means “rama owes adit money”).
 
+- Undirected graphs don’t have arrows, and the relationship goes both ways (ross - rachel means “ross dated rachel and rachel dated ross”).
 
-### Logarithms
+- Queues are FIFO (First In, First Out).
 
-You may not remember what logarithms are, but you probably know what 
-exponentials are. log10 100 is like asking, “How many 10s do we multiply 
-together to get 100?” The answer is 2: 10 × 10. So log10 100 = 2. **Logs are the flip of exponentials.**
+- Stacks are LIFO (Last In, First Out).
 
-| Exponentials |         Logarithms         |
-|:------------:|:--------------------------:|
-|   $10^2$     |  log<sub>10</sub> 100 = 2  |
-|  $10^3$      |  log<sub>10</sub> 1000 = 3 |
-|  $2^3$       |  log<sub>2</sub> 8 = 3     |
-|  $2^4$       |  log<sub>2</sub> 16 = 4    |
-|  $2^5$       |  log<sub>2</sub> 32 = 5    |
+- You need to check people in the order they were added to the search list, so the search list needs to be a queue. Otherwise, you won’t get the shortest path.
 
-## Exercises
-
-**1.1** Suppose you have a sorted list of 128 names, and you’re searching through it using binary search. What’s the maximum number of steps it would take?
-
-- Answer = 7
-
-**1.2** Suppose you double the size of the list. What’s the maximum number of steps now?
-
-- Answer = that means the list has 256 names now, so now 2 to the power of **8** = 256
-
-
-## Recap
-
-- Binary search is a lot faster than simple search.
-- O(log n) is faster than O(n), but it gets a lot faster once the list of items you’re searching through grows.
-- Algorithm speed isn’t measured in seconds.
-- Algorithm times are measured in terms of growth of an algorithm.
-- Algorithm times are written in Big O notation.
+- Once you check someone, make sure you don’t check them again. Otherwise, you might end up in an infinite loop.
